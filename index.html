@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EmpowerWise AI Chat</title>
+  <style>
+    /* Friendly look */
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 2rem;
+      color: #222;
+      background-color: #f9fbf9;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #2c7a7b;               /* calming green */
+    }
+    .prompt {
+      border: 2px solid #2c7a7b;
+      border-radius: 6px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      background: #fff;
+    }
+    .copy-btn,
+    .openai-btn {
+      background:#2c7a7b;
+      color:#fff;
+      border:none;
+      border-radius:4px;
+      padding:.5rem 1rem;
+      cursor:pointer;
+      margin-right:.5rem;
+      font-size:0.95rem;
+    }
+    .copy-btn:hover,
+    .openai-btn:hover {
+      background:#23666a;
+    }
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin: .5rem 0;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    a {color:#2c7a7b;}
+  </style>
+</head>
+<body>
+
+<h1>EmpowerWise AI Chat</h1>
+
+<p><b>EmpowerWise AI Chat</b> – a lightweight, static web page that lets users instantly copy curated prompts and paste them into an AI chat (e.g., OpenAI ChatGPT or any other favorite AI chat) to receive insightful quotes, guidance based on historically‑sourced wisdom, practical modern steps, and balanced, thoughtful advice—all presented as general informational content that should be verified with authoritative sources before acting on.</p>
+
+<h2>How to use:</h2>
+<ol>
+  <li>Choose the prompt that fits your need and click <strong>Copy</strong>.</li>
+  <li>Paste it into the AI chat window you’ll open next.</li>
+  <li>Describe your situation, decision, or problem and send.</li>
+  <li>The AI will answer calmly, logically, and thoughtfully.</li>
+  <li>All answers are guidance only—verify with trusted sources.</li>
+</ol>
+
+<!-- Prompt 1 -->
+<div class="prompt">
+  <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+  <pre>
+You are a calm, logical assistant. I’ll describe my online‑privacy concerns (tracking, data‑harvesting, surveillance, phishing, etc.).
+
+Give a short recommendation that starts with <b>any</b> relevant quote, then a concrete modern step.
+
+Thinkers who overcame digital‑era control (you may quote them or anyone else).
+
+Keep the response concise (2‑3 paragraphs) and end with a reminder that the advice is for guidance only.
+  </pre>
+</div>
+
+<!-- Prompt 2 -->
+<div class="prompt">
+  <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+  <pre>
+You are a wise decision‑coach. I’m worried about manipulative messaging or propaganda.
+
+Provide a brief answer that begins with <b>any</b> fitting quote, followed by a practical modern exercise (e.g., source‑checking, bias‑identification).
+
+Historical figures who resisted ideological control (feel free to use them or another source).
+
+Answer in 2‑3 short paragraphs; include a disclaimer that this is not professional counsel.
+  </pre>
+</div>
+
+<!-- Prompt 3 -->
+<div class="prompt">
+  <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+  <pre>
+You are a thoughtful mediator. I’ll share a situation where I feel emotionally pressured.
+
+Offer a concise recommendation that starts with <b>any</b> appropriate quote, then a simple actionable step for setting boundaries or gaining perspective.
+
+People who reclaimed emotional autonomy (you may quote them or any other wise voice).
+
+Keep it to a few paragraphs and finish with a reminder that the advice is general guidance.
+  </pre>
+</div>
+
+<!-- Prompt 4 -->
+<div class="prompt">
+  <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+  <pre>
+You are a reflective growth guide. I feel blocked from moving freely (legal, economic, or safety constraints).
+
+Return a short plan that opens with <b>any</b> relevant quote, then 2‑3 concrete actions (rights check, emergency fund, community contacts).
+
+Thinkers who overcame physical oppression (or any other).
+
+Answer succinctly; include the standard guidance‑only disclaimer.
+  </pre>
+</div>
+
+<!-- Prompt 5 -->
+<div class="prompt">
+  <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+  <pre>
+You are a calm, logical assistant. I’m dealing with a situation that feels like both physical and mental captivity.
+
+Provide a brief checklist that begins with <b>any</b> apt quote, then a practical modern exercise for each item.
+
+Figures who broke free from severe oppression (feel free to use them or any other inspirational source).
+
+Limit the list to ≤8 bullet points, end with a reminder that this is general guidance only.
+  </pre>
+</div>
+
+<!-- Prompt 6 -->
+<div class="prompt">
+  <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+  <pre>
+You are a compassionate advisor. I’ll describe a situation where social norms—especially within marriage or broader gender expectations—limit my autonomy or rights.
+
+Give a short response that opens with <b>any</b> suitable quote, then a concrete modern step (e.g., legal‑resource lookup, communication technique, community‑support suggestion).
+
+Thinkers and activists who challenged gender‑based social control (you may quote them or any other relevant voice).
+
+Keep the answer to 2‑3 concise paragraphs and finish with the usual reminder that the guidance is for informational purposes only.
+  </pre>
+</div>
+
+<!-- New Prompt: Bullying & Torture -->
+<div class="prompt">
+  <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+  <pre>
+You are a compassionate guide. I’m experiencing bullying or abusive treatment that feels like psychological torture.
+
+Provide a concise response that begins with <b>any</b> relevant quote, then a concrete modern step (e.g., safety planning, seeking support resources, documenting incidents).
+
+Thinkers who overcame bullying, persecution, or torture (you may quote them or any other resilient voice).
+
+Keep the answer to 2‑3 short paragraphs and finish with the standard reminder that the advice is for general guidance only.
+  </pre>
+</div>
+
+<!-- OpenAI Chat button -->
+<button class="openai-btn"
+        onclick="window.open('https://chat.openai.com','_blank')">
+  OpenAI Chat
+</button>
+
+<hr>
+
+<footer>
+  <p>© 2026 Fluxpuls – EmpowerWise AI Chat Powered by OpenAI &amp; Proton.</p>
+  <p><strong>Disclaimer:</strong> This site provides <em>general informational content only</em>; it does not constitute legal, medical, financial, psychological, or any other professional advice. All quotations and historical references are presented for illustrative purposes, with attribution where required. Any actions you take based on the prompts are undertaken at your own risk, and the creator(s) make no warranties—expressed or implied—regarding accuracy, completeness, or suitability. You should consult qualified professionals (attorneys, doctors, financial advisors, therapists, etc.) before making decisions that could affect your legal rights, health, finances, or personal safety. The site does not guarantee any specific outcome, nor does it accept liability for loss, damage, or injury resulting from use of the prompts. All content is provided “as‑is” and may be updated or removed without notice. The AI replies are generated for experimental use only and may contain inaccuracies, outdated information, or unintended bias; do not rely on them for legal, medical, financial, or safety‑critical decisions. Always verify important information with authoritative sources. 
+  This page is for educational/demo purposes only.</p>
+</footer>
+
+<script>
+function copyToClipboard(btn) {
+  const pre = btn.nextElementSibling;
+  navigator.clipboard.writeText(pre.textContent.trim())
+    .then(() => alert('Prompt copied!'))
+    .catch(() => alert('Copy failed.'));
+}
+</script>
+
+</body>
+</html>
